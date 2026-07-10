@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS.E_Assignment04-Ex2-Task1</title>
+    <style>
+        .name-box {
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            color: magenta;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Task 1: Random Name Picker</h1>
+    <div class="name-box">
+        <p></p>
+    </div>
+    <button id="chooseButton">Choose Name</button>
+    <script>
+        const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+
+        const para = document.querySelector('p');
+        const chooseButton = document.getElementById('chooseButton');
+
+        function chooseName() {
+            const RandomIndex = Math.floor(Math.random() * names.length);
+
+            para.textContent = names[RandomIndex];
+        }
+
+        chooseButton.addEventListener('click', chooseName);
+
+        chooseName();
+    </script>
+</body>
+
+</html>

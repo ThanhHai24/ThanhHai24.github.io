@@ -4,15 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS.E_Assignment04-Ex2-Task3</title>
+    <style>
+        .name-box {
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            color: magenta;
+        }
+    </style>
 </head>
 
 <body>
-    <p></p>
+    <h1>Task 3: Random Name Picker</h1>
+    <div class="name-box">
+        <p></p>
+    </div>
+    <button id="chooseButton">Choose Name</button>
     <script>
         const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
 
         const para = document.querySelector('p');
+        const chooseButton = document.getElementById('chooseButton');
 
         function random(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -24,6 +41,8 @@
 
             para.textContent = names[index];
         }
+
+        chooseButton.addEventListener('click', chooseName);
 
         chooseName();
     </script>
