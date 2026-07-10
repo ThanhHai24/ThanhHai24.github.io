@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --font-sans: 'Roboto', sans-serif;
+            --font-montserrat: 'Montserrat', sans-serif;
+            --font-kaushan: 'Kaushan Script', cursive;
+            --font-droid: 'Droid Serif', serif;
+            --font-roboto-slab: 'Roboto Slab', serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div
+            class="header-container bg-[url('resources/header-bg.jpg')] bg-center bg-cover h-[50vh] md:h-screen px-0 lg:px-[100px] flex flex-col">
+            <div
+                class="nav-bar flex justify-between items-center h-[100px] relative w-full bg-[rgba(33,33,33,0.95)] px-5 md:px-10 lg:bg-transparent lg:px-0">
+                <div class="logo flex items-center max-h-[100px]">
+                    <img class="h-10 md:h-[70px] w-auto object-contain" src="resources/navbar-logo.png" alt="">
+                </div>
+                <input type="checkbox" id="nav-toggle" class="peer hidden">
+                <label for="nav-toggle"
+                    class="flex lg:hidden items-center gap-[5px] bg-[#fed136] hover:bg-[#fec503] text-white px-[15px] py-[10px] rounded cursor-pointer font-montserrat font-bold text-[10px] md:text-base uppercase select-none transition-colors duration-300">
+                    MENU <i class="bi bi-list"></i>
+                </label>
+                <div
+                    class="nav hidden peer-checked:flex lg:flex absolute lg:static top-[100px] left-[-20px] md:left-[-50px] lg:left-0 w-[calc(100%+40px)] md:w-[calc(100%+100px)] lg:w-auto bg-[rgba(33,33,33,0.95)] lg:bg-transparent flex-col lg:flex-row items-center py-5 lg:py-0 gap-[15px] lg:gap-10 z-[1000] lg:z-auto font-montserrat uppercase text-base tracking-wider">
+                    <a class="block w-full text-center py-2.5 lg:w-auto lg:py-0 text-white transition-colors duration-300 hover:text-[#fed136]"
+                        href="#">SERVICES</a>
+                    <a class="block w-full text-center py-2.5 lg:w-auto lg:py-0 text-white transition-colors duration-300 hover:text-[#fed136]"
+                        href="#">PORTFOLIO</a>
+                    <a class="block w-full text-center py-2.5 lg:w-auto lg:py-0 text-white transition-colors duration-300 hover:text-[#fed136]"
+                        href="#">ABOUT</a>
+                    <a class="block w-full text-center py-2.5 lg:w-auto lg:py-0 text-white transition-colors duration-300 hover:text-[#fed136]"
+                        href="#">TEAM</a>
+                    <a class="block w-full text-center py-2.5 lg:w-auto lg:py-0 text-white transition-colors duration-300 hover:text-[#fed136]"
+                        href="#">CONTACT</a>
+                </div>
+            </div>
+
+            <div
+                class="welcome-content flex flex-col items-center justify-center flex-grow mt-[-60px] md:mt-[-30px] lg:mt-0">
+                <h1 class="font-droid text-[20px] md:text-[40px] lg:text-[50px] font-normal text-white mb-5">
+                    Welcome To Our Studio!
+                </h1>
+                <p
+                    class="font-montserrat text-[40px] md:text-[65px] lg:text-[80px] font-bold text-white text-center px-5 md:px-0 uppercase leading-tight">
+                    IT'S NICE TO MEET YOU
+                </p>
+                <button
+                    class="font-montserrat text-base md:text-base lg:text-[18px] font-bold text-white uppercase bg-[#fed136] hover:bg-[#fec503] active:scale-98 px-[25px] py-[15px] md:px-[30px] md:py-[20px] lg:px-[45px] lg:py-[23px] rounded-md mt-10 md:mt-[60px] lg:mt-[50px] cursor-pointer transition-all duration-300 ease-in-out">
+                    TELL ME MORE</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="services py-[60px] px-5 lg:p-[100px] flex flex-col items-center justify-center">
+            <h1 class="font-montserrat text-[30px] md:text-[40px] lg:text-[50px] font-bold text-black">SERVICES</h1>
+            <p class="font-roboto-slab text-[14px] md:text-[20px] font-normal text-gray-500 italic mb-[50px]">Lorem
+                ipsum dolor sit amet consectetur.</p>
+
+            <div class="services-grid grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[30px] lg:gap-[50px] mt-[50px]">
+                <div class="service flex flex-col items-center justify-center">
+                    <div
+                        class="service-icon flex items-center justify-center w-[120px] h-[120px] lg:w-[150px] lg:h-[150px] bg-[#fed136] rounded-full mb-5">
+                        <i class="bi bi-cart-fill text-white text-[55px] lg:text-[70px]"></i>
+                    </div>
+                    <h2 class="font-montserrat text-[20px] md:text-[24px] lg:text-[30px] font-bold text-black mt-5">
+                        E-Commerce</h2>
+                    <p
+                        class="font-roboto-slab text-[14px] md:text-[16px] lg:text-[20px] font-normal text-gray-500 text-center mt-2.5 w-full md:w-[90%] lg:w-[70%]">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Minima maxime quam architecto quo
+                        inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="service flex flex-col items-center justify-center">
+                    <div
+                        class="service-icon flex items-center justify-center w-[120px] h-[120px] lg:w-[150px] lg:h-[150px] bg-[#fed136] rounded-full mb-5">
+                        <i class="bi bi-laptop text-white text-[55px] lg:text-[70px]"></i>
+                    </div>
+                    <h2 class="font-montserrat text-[20px] md:text-[24px] lg:text-[30px] font-bold text-black mt-5">
+                        Responsive Design</h2>
+                    <p
+                        class="font-roboto-slab text-[14px] md:text-[16px] lg:text-[20px] font-normal text-gray-500 text-center mt-2.5 w-full md:w-[90%] lg:w-[70%]">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Minima maxime quam architecto quo
+                        inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="service flex flex-col items-center justify-center">
+                    <div
+                        class="service-icon flex items-center justify-center w-[120px] h-[120px] lg:w-[150px] lg:h-[150px] bg-[#fed136] rounded-full mb-5">
+                        <i class="bi bi-lock-fill text-white text-[55px] lg:text-[70px]"></i>
+                    </div>
+                    <h2 class="font-montserrat text-[20px] md:text-[24px] lg:text-[30px] font-bold text-black mt-5">Web
+                        Security</h2>
+                    <p
+                        class="font-roboto-slab text-[14px] md:text-[16px] lg:text-[20px] font-normal text-gray-500 text-center mt-2.5 w-full md:w-[90%] lg:w-[70%]">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Minima maxime quam architecto quo
+                        inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="portfolio py-0 px-[50px] md:py-[60px] md:px-5 lg:p-[100px] flex flex-col items-center justify-center bg-[#f5f5f5]">
+            <h1 class="font-montserrat text-[30px] md:text-[40px] lg:text-[50px] font-bold text-black">PORTFOLIO</h1>
+            <p class="font-roboto-slab text-[14px] md:text-[20px] font-normal text-gray-500 italic mb-[50px]">Lorem
+                ipsum dolor sit amet consectetur.</p>
+            <div
+                class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] lg:gap-[50px] mt-[50px]">
+                <div class="portfolio-item bg-white">
+                    <div class="portfolio-img">
+                        <img class="w-full h-auto object-cover" src="resources/portfolio/01-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="portfolio-caption flex flex-col items-center justify-center p-5">
+                        <h3 class="font-montserrat text-[20px] md:text-[30px] font-bold text-black">Threads</h3>
+                        <p class="font-roboto-slab text-[12px] md:text-[20px] font-normal text-gray-500 italic mb-2.5">
+                            Illustration</p>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-white">
+                    <div class="portfolio-img">
+                        <img class="w-full h-auto object-cover" src="resources/portfolio/02-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="portfolio-caption flex flex-col items-center justify-center p-5">
+                        <h3 class="font-montserrat text-[20px] md:text-[30px] font-bold text-black">Explore</h3>
+                        <p class="font-roboto-slab text-[12px] md:text-[20px] font-normal text-gray-500 italic mb-2.5">
+                            Graphic Design</p>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-white">
+                    <div class="portfolio-img">
+                        <img class="w-full h-auto object-cover" src="resources/portfolio/03-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="portfolio-caption flex flex-col items-center justify-center p-5">
+                        <h3 class="font-montserrat text-[20px] md:text-[30px] font-bold text-black">Finish</h3>
+                        <p class="font-roboto-slab text-[12px] md:text-[20px] font-normal text-gray-500 italic mb-2.5">
+                            Identity</p>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-white">
+                    <div class="portfolio-img">
+                        <img class="w-full h-auto object-cover" src="resources/portfolio/04-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="portfolio-caption flex flex-col items-center justify-center p-5">
+                        <h3 class="font-montserrat text-[20px] md:text-[30px] font-bold text-black">Lines</h3>
+                        <p class="font-roboto-slab text-[12px] md:text-[20px] font-normal text-gray-500 italic mb-2.5">
+                            Branding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-white">
+                    <div class="portfolio-img">
+                        <img class="w-full h-auto object-cover" src="resources/portfolio/05-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="portfolio-caption flex flex-col items-center justify-center p-5">
+                        <h3 class="font-montserrat text-[20px] md:text-[30px] font-bold text-black">Southwest</h3>
+                        <p class="font-roboto-slab text-[12px] md:text-[20px] font-normal text-gray-500 italic mb-2.5">
+                            Website Design</p>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-white">
+                    <div class="portfolio-img">
+                        <img class="w-full h-auto object-cover" src="resources/portfolio/06-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="portfolio-caption flex flex-col items-center justify-center p-5">
+                        <h3 class="font-montserrat text-[20px] md:text-[30px] font-bold text-black">Window</h3>
+                        <p class="font-roboto-slab text-[12px] md:text-[20px] font-normal text-gray-500 italic mb-2.5">
+                            Photography</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team py-[60px] px-[100px] lg:p-[100px] flex flex-col items-center justify-center bg-[#f5f5f5]">
+            <h1 class="font-montserrat text-[30px] md:text-[40px] lg:text-[50px] font-bold text-black">OUR AMAZING TEAM
+            </h1>
+            <p
+                class="font-roboto-slab text-[14px] md:text-[20px] font-normal text-gray-500 italic mb-[50px] text-center">
+                Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="team-grid grid grid-cols-1 lg:grid-cols-3 gap-[60px] lg:gap-[150px] mt-[50px] p-5 lg:p-[50px]">
+                <div class="team-member flex flex-col items-center justify-center">
+                    <div
+                        class="team-avatar w-[220px] h-[220px] lg:w-[300px] lg:h-[300px] rounded-full flex items-center justify-center bg-gray-300 p-[10px]">
+                        <img class="h-full w-full object-cover rounded-full" src="resources/team/1.jpg" alt="">
+                    </div>
+                    <h2
+                        class="font-montserrat text-[20px] md:text-[24px] lg:text-[30px] font-bold text-black mt-[30px]">
+                        Kay Garland</h2>
+                    <p class="font-roboto-slab text-[14px] md:text-[20px] font-normal text-gray-500 text-center">Lead
+                        Designer</p>
+                    <div class="team-social mt-[25px] flex justify-center gap-[20px]">
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-twitter text-white text-2xl"></i></a>
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-facebook text-white text-2xl"></i></a>
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-linkedin text-white text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="team-member flex flex-col items-center justify-center">
+                    <div
+                        class="team-avatar w-[220px] h-[220px] lg:w-[300px] lg:h-[300px] rounded-full flex items-center justify-center bg-gray-300 p-[10px]">
+                        <img class="h-full w-full object-cover rounded-full" src="resources/team/2.jpg" alt="">
+                    </div>
+                    <h2
+                        class="font-montserrat text-[20px] md:text-[24px] lg:text-[30px] font-bold text-black mt-[30px]">
+                        Larry Parker</h2>
+                    <p class="font-roboto-slab text-[14px] md:text-[20px] font-normal text-gray-500 text-center">Lead
+                        Marketer</p>
+                    <div class="team-social mt-[25px] flex justify-center gap-[20px]">
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-twitter text-white text-2xl"></i></a>
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-facebook text-white text-2xl"></i></a>
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-linkedin text-white text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="team-member flex flex-col items-center justify-center">
+                    <div
+                        class="team-avatar w-[220px] h-[220px] lg:w-[300px] lg:h-[300px] rounded-full flex items-center justify-center bg-gray-300 p-[10px]">
+                        <img class="h-full w-full object-cover rounded-full" src="resources/team/3.jpg" alt="">
+                    </div>
+                    <h2
+                        class="font-montserrat text-[20px] md:text-[24px] lg:text-[30px] font-bold text-black mt-[30px]">
+                        Diana Petersen</h2>
+                    <p class="font-roboto-slab text-[14px] md:text-[20px] font-normal text-gray-500 text-center">Lead
+                        Developer</p>
+                    <div class="team-social mt-[25px] flex justify-center gap-[20px]">
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-twitter text-white text-2xl"></i></a>
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-facebook text-white text-2xl"></i></a>
+                        <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                            href="#"><i class="bi bi-linkedin text-white text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p
+                class="font-roboto-slab text-[14px] md:text-[20px] font-normal text-gray-500 italic text-center mt-[50px]">
+                Lorem ipsum dolor sit amet,
+                consectetur
+                dipisicing elit. Aut eaque, laboriosam veritatis, quos non quis
+                ad perspiciatis, toham corporis ea, alias ut unde.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div
+            class="logos grid grid-cols-1 md:flex md:flex-wrap lg:flex-nowrap justify-items-center items-center md:justify-center lg:justify-between gap-[30px] md:gap-10 lg:gap-0 py-[50px] px-5 md:py-[50px] md:px-5 lg:p-[100px] m-0 lg:mx-[100px] lg:my-0">
+            <img class="max-h-[100px] md:max-h-[40px] lg:max-h-none w-auto h-auto object-cover"
+                src="resources/logos/envato.jpg" alt="">
+            <img class="max-h-[100px] md:max-h-[40px] lg:max-h-none w-auto h-auto object-cover"
+                src="resources/logos/designmodo.jpg" alt="">
+            <img class="max-h-[100px] md:max-h-[40px] lg:max-h-none w-auto h-auto object-cover"
+                src="resources/logos/themeforest.jpg" alt="">
+            <img class="max-h-[100px] md:max-h-[40px] lg:max-h-none w-auto h-auto object-cover"
+                src="resources/logos/creative-market.jpg" alt="">
+        </div>
+        <div
+            class="bottom flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-0 p-5 lg:px-[150px] lg:py-0 mb-5 text-center lg:text-left">
+            <p class="font-montserrat text-[16px] text-gray-500">Copyright © Your Website 2020</p>
+            <div class="bottom-social flex gap-[20px]">
+                <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                    href="#"><i class="bi bi-twitter text-white text-2xl"></i></a>
+                <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                    href="#"><i class="bi bi-facebook text-white text-2xl"></i></a>
+                <a class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[rgba(61,61,61,1)]"
+                    href="#"><i class="bi bi-linkedin text-white text-2xl"></i></a>
+            </div>
+            <div class="bottom-link flex gap-[20px]">
+                <a class="font-montserrat text-[16px] text-[#fec503]" href="#">Privacy Policy</a>
+                <a class="font-montserrat text-[16px] text-[#fec503]" href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
