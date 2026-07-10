@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000px" height="500" style="border: 1px solid #000;"></canvas>
+    <div>
+        <label for="x">X:</label>
+        <input type="text" id="x">
+        <label for="y">Y:</label>
+        <input type="text" id="y">
+        <label for="width">Width:</label>
+        <input type="text" id="width">
+        <label for="height">Height:</label>
+        <input type="text" id="height">
+        <label for="color">Color:</label>
+        <input type="text" id="color">
+        <button id="drawButton">Draw</button>
+    </div>
+    <script>
+        const canvas = document.querySelector('canvas');
+
+        const ctx = canvas.getContext('2d');
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = color;
+
+            ctx.fillRect(x, y, width, height);
+        }
+
+        const drawButton = document.getElementById('drawButton');
+        drawButton.addEventListener('click', () => {
+            x = parseInt(document.getElementById('x').value);
+            y = parseInt(document.getElementById('y').value);
+            width = parseInt(document.getElementById('width').value);
+            height = parseInt(document.getElementById('height').value);
+            color = document.getElementById('color').value;
+
+            draw();
+        });
+    </script>
+</body>
+
+</html>

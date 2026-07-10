@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container"></div>
+        <button id="back">Back</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script>
+        const images = [
+            'images/1.jpg',
+            'images/2.jpg',
+            'images/3.jpg'
+        ];
+
+        const imageContainer = document.querySelector('.image-container');
+        const backButton = document.querySelector('#back');
+        const nextButton = document.querySelector('#next');
+
+        const renderImage = (imagePath) => {
+            imageContainer.innerHTML = `<img src="${imagePath}">`;
+        };
+
+        renderImage(images[0]);
+
+        let index = 0;
+
+        backButton.addEventListener('click', () => {
+            index--;
+            if (index < 0) {
+                index = 0;
+            }
+            renderImage(images[index]);
+        });
+
+        nextButton.addEventListener('click', () => {
+            index++;
+            if (index >= images.length) {
+                index = images.length - 1;
+            }
+            renderImage(images[index]);
+        });
+    </script>
+</body>
+
+</html>
