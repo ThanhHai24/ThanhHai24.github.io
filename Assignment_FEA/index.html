@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Search Application Assignment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section id="search-section">
+        <div class="search-container">
+            <h1>Wikipedia Search</h1>
+            <a href="https://app.xmind.com/share/bs8CX8cx">Click to open Xmind mindmap!</a>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search ...">
+                <button id="search-button">Search</button>
+                <div id="suggestions" class="suggestion"></div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <span>Searching Wikipedia...</span>
+            </div>
+
+            <div id="error" class="error-message hidden"></div>
+        </div>
+
+        <div class="results-container">
+            <h2 id="search-results">Search Results</h2>
+            <div class="results-items" id="results">
+                >
+            </div>
+        </div>
+    </section>
+
+    <section id="article-section" class="hidden">
+        <button id="back-btn">Back to results</button>
+        <div class="article" id="article-container">
+
+        </div>
+    </section>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
